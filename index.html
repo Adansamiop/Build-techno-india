@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUILD TECHNO INDIA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hamburger Menu Icon -->
+<div class="hamburger-menu" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- Dropdown Menu (Conditional Display Based on Login Status) -->
+<div class="dropdown-menu" id="dropdownMenu">
+    <div id="menuNotLoggedIn" style="display: none;">
+        <a href="#" onclick="showSignup()">Sign Up</a>
+        <a href="#" onclick="showLogin()">Login</a>
+    </div>
+    <div id="menuLoggedIn" style="display: none;">
+        <a href="#" onclick="showAccount()">My Account</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+    
+
+<!-- Info Section for About Content -->
+<section id="infoSection" class="info-section">
+    <div id="infoContent"></div>
+    <button onclick="closeInfo()">Close</button>
+</section>
+
+    <!-- Header Section with Navigation Buttons -->
+   <header>
+    <img src="projects/logo.png" alt="Company Logo" class="logo">
+    <img src="projects/name-image.png" alt="Build Techno India" class="name-image">
+    
+    <!-- Navigation Buttons Section -->
+    <nav class="top-nav">
+        <button onclick="showPage('home')">
+            <img src="icons/home-icon.png" alt="Home">
+            <span>Home</span>
+        </button>
+        <button onclick="showPage('services')">
+            <img src="icons/services-icon.png" alt="Services">
+            <span>Services</span>
+        </button>
+        <button onclick="showPage('projects')">
+            <img src="icons/projects-icon.png" alt="Projects">
+            <span>Projects</span>
+        </button>
+        <button onclick="showPage('contact')">
+            <img src="icons/contact-icon.png" alt="Contact">
+            <span>Contact</span>
+        </button>
+    </nav>
+</header>
+ 
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section with Welcome and Image Slider -->
+        <section id="home" class="page active">
+            <div class="hero-banner">
+                <h2>Welcome to BUILD TECHNO INDIA</h2>
+                <p>Innovative Solutions for a New India...</p>
+            </div>
+
+            <!-- Image Slider Section -->
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="images/construction.jpg" alt="Construction Image">
+                        <p class="quote">"Building your future with excellence."</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/design.jpg" alt="Design Image">
+                        <p class="quote">"Innovative designs for a modern world."</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/engineering.jpg" alt="Engineering Image">
+                        <p class="quote">"Engineering solutions for every project."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us Section -->
+            <div class="why-choose-us">
+                <h3>Why Choose Us</h3>
+                <div class="reasons-container">
+                    <span class="reason-icon">Quality</span>
+                    <span class="reason-icon">Reliability</span>
+                    <span class="reason-icon">Innovation</span>
+                    <span class="reason-icon">Sustainability</span>
+                    <span class="center-icon">Best Services</span>
+                </div>
+            </div>
+
+            <!-- Achievements Section -->
+            <div class="achievements">
+                <h3>Our Achievements</h3>
+                <img src="images/certificate.jpg" alt="Achievement Certificate" class="achievement-certificate">
+                <p>Recognized for excellence in construction and infrastructure development.</p>
+            </div>
+
+            <!-- Clients Section -->
+            <div class="clients">
+                <h3>Our Clients</h3>
+                <div class="client-icons">
+                    <span class="client-icon">Bricks Pvt Ltd</span>
+                    <span class="client-icon">Delcom Pvt Ltd</span>
+                    <span class="client-icon">Captain Steel Pvt Ltd</span>
+                </div>
+            </div>
+            <h3>Connect with Us</h3>
+            <a href="https://www.instagram.com/build_techno_india" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/buildtechnoindia00" target="_blank">Facebook</a>
+        </section>
+
+        <section id="services" class="page">
+    <h2>Select a Service</h2>
+    
+    <!-- Four-Quadrant Service Images -->
+    <div class="services-grid">
+        <div class="service-item" onclick="showServiceDetail('construction')">
+            <img src="icons/construction-service.jpg" alt="Construction">
+            <p>Construction</p>
+        </div>
+        <div class="service-item" onclick="showServiceDetail('designing')">
+            <img src="icons/designing-service.jpg" alt="Designing">
+            <p>Designing</p>
+        </div>
+        <div class="service-item" onclick="showServiceDetail('surveying')">
+            <img src="icons/surveying-service.jpg" alt="Surveying">
+            <p>Surveying</p>
+        </div>
+        <div class="service-item" onclick="showServiceDetail('build-material')">
+            <img src="icons/build-material.jpg" alt="Building Material Consulting">
+            <p>Building Material Consulting</p>
+        </div>
+    </div>
+</section>
+
+        <!-- Service Details -->
+        <section id="service-construction" class="page service-page">
+            <h2>Construction Services</h2>
+            <ul>
+                <li>Supervision - Rs 5000/project</li>
+                <li>Modification - Rs 7000/project</li>
+                <li>Contract Work (with material) - Rs 12000/project</li>
+                <li>Contract Work (without material) - Rs 9000/project</li>
+                <li>Renovation - Rs 8000/project</li>
+            </ul>
+            <button onclick="showPage('services')">Back to Services</button>
+        </section>
+
+        <section id="service-designing" class="page service-page">
+            <h2>Designing Services</h2>
+            <ul>
+                <li>Architectural Design - Rs 15000/project</li>
+                <li>Structural Design - Rs 12000/project</li>
+                <li>CAD Plan 2D - Rs 5000/project</li>
+                <li>3D Design (Elevation) - Rs 10000/project</li>
+                <li>3D Interior Design - Rs 12000/project</li>
+            </ul>
+            <button onclick="showPage('services')">Back to Services</button>
+        </section>
+
+        <section id="service-surveying" class="page service-page">
+            <h2>Surveying Services</h2>
+            <ul>
+                <li>Plot Mapping - Rs 5000/project</li>
+                <li>Landscaping - Rs 7000/project</li>
+                <li>Land Planning - Rs 6000/project</li>
+                <li>Labeling - Rs 3000/project</li>
+            </ul>
+            <button onclick="showPage('services')">Back to Services</button>
+        </section>
+
+        <section id="service-build-material" class="page service-page">
+            <h2>Building Material Consulting</h2>
+            <p>Get expert advice on sourcing high-quality building materials at competitive prices to fit any project needs.</p>
+            <button onclick="showPage('services')">Back to Services</button>
+        </section>
+
+        <section id="projects" class="page">
+    <h2>Project Gallery</h2>
+    
+    <!-- Video Gallery Section -->
+    <div class="video-gallery">
+        <h3>Recent Project Videos</h3>
+        <div class="video-thumbnails">
+            <div class="video-item" onclick="playVideo('video1.mp4')">
+                <img src="thumbnails/video1-thumb.jpg" alt="Project Video 1">
+                <p>Project Video 1</p>
+            </div>
+            <div class="video-item" onclick="playVideo('video2.mp4')">
+                <img src="thumbnails/video2-thumb.jpg" alt="Project Video 2">
+                <p>Project Video 2</p>
+            </div>
+            <div class="video-item" onclick="playVideo('video3.mp4')">
+                <img src="thumbnails/video3-thumb.jpg" alt="Project Video 3">
+                <p>Project Video 3</p>
+            </div>
+            <div class="video-item" onclick="playVideo('video4.mp4')">
+                <img src="thumbnails/video4-thumb.jpg" alt="Project Video 4">
+                <p>Project Video 4</p>
+            </div>
+        </div>
+
+        <!-- Video Player Modal -->
+        <div id="videoModal" class="video-modal" onclick="closeVideo()">
+            <video id="videoPlayer" controls></video>
+            <span class="close-button">&times;</span>
+        </div>
+    
+    <!-- Image Gallery Section -->
+    <h3>Recent Project Images</h3>
+    <div id="gallery" class="gallery">
+        <!-- Images will be dynamically loaded here -->
+    </div>
+    </section>
+    
+        <section id="contact" class="page">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or want to chat with us, use the chatbox below!</p>
+
+    <!-- Chatbox Interface -->
+    <div class="chat-container">
+        <div id="chatBox" class="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+        
+        <!-- Quick Replies -->
+        <div class="quick-replies">
+            <button onclick="sendQuickReply('What services do you offer?')">What services do you offer?</button>
+            <button onclick="sendQuickReply('What are your office hours?')">What are your office hours?</button>
+            <button onclick="sendQuickReply('Can I book an appointment?')">Can I book an appointment?</button>
+        </div>
+
+        <!-- Input Field -->
+        <div class="chat-input-container">
+            <input type="text" id="userInput" placeholder="Type a message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</section>
+
+        
+        <!-- Footer -->
+        <footer class="home-footer">
+            <p>&copy; 2019 BUILD TECHNO INDIA. All Rights Reserved.</p>
+        </footer>
+        
+    </main>
+
+    <script src="script.js"></script>
+
+<!-- Signup Form Modal -->
+<div id="signupForm" class="modal">
+    <form onsubmit="sendSignup(event)">
+        <h2>Sign Up</h2>
+        <input type="text" id="signupName" placeholder="Name" required>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <input type="text" id="signupMobile" placeholder="Mobile Number" required>
+        <input type="text" id="signupAddress" placeholder="Address" required>
+        <button type="submit">Sign Up</button>
+        <button type="button" onclick="closeModal('signupForm')">Cancel</button>
+    </form>
+</div>
+
+<!-- Login Form Modal -->
+<div id="loginForm" class="modal">
+    <form onsubmit="sendLogin(event)">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <button type="button" onclick="closeModal('loginForm')">Cancel</button>
+    </form>
+</div>
+
+<!-- Discount Popup Modal -->
+<div id="discountPopup" class="modal">
+    <div class="popup-content">
+        <h2>Get 10% Off on Any Project!</h2>
+        <p>Sign up now to claim your discount and enjoy 10% off on all services.</p>
+        <button onclick="showSignup()">Sign Up</button>
+        <button onclick="closeModal('discountPopup')">Close</button>
+    </div>
+</div>
+
+<!-- Floating WhatsApp and Call Icons -->
+<div id="floatingIcons">
+    <!-- WhatsApp Icon -->
+    <div class="floating-icon" id="whatsappIcon" onclick="openWhatsApp()">
+        <img src="icons/whatsapp-icon.png" alt="WhatsApp">
+    </div>
+    <!-- Phone Icon -->
+    <div class="floating-icon" id="phoneIcon" onclick="makeCall()">
+        <img src="icons/phone-icon.png" alt="Call">
+    </div>
+
+<!-- Floating "10% Off" Icon -->
+<div id="discountIcon" class="floating-icon-discount" onclick="openDiscountPopup()">
+    <span>10% OFF</span>
+</div>
+
+    
+</body>
+</html>
